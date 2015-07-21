@@ -1,7 +1,7 @@
 //making a variable that grabs the id "cards"
 var showCards = document.getElementById("cards");
 
-//onclick of button run function
+//onclick of button run function and hide after click
 showCards.onclick = function(){
   var cardContainer = document.getElementById('container');
   cardContainer.innerHTML = "";
@@ -94,7 +94,4 @@ hideClick.onclick = function(){
   cardContainer.style.display = "none";
   showCards.style.display = "";
   hideClick.style.display = "none";
-}
-
-
-
+};
