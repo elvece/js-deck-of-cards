@@ -93,11 +93,14 @@ hideClick.onclick = function(){
   var cardContainer = document.getElementById('container');
   cardContainer.style.display = "none";
   hideClick.style.display = "none";
-
+//if redeal button with id new is null, then run reDeal function
   if (document.getElementById('new') === null) {
-    reDeal();
-  }
-}
+    reDeal();}
+    else {//otherwise, resets the card display to default
+      var reShowCards = document.getElementById('new');
+      reShowCards.style.display = "";
+    }
+};
 
 //creates reDeal button and appends to dom
 function reDeal(){
@@ -116,9 +119,7 @@ function reDeal(){
     cardContainer.innerHTML = "";
     cardContainer.style.display = "";
     hideClick.style.display = "";
+    reShowCards.style.display = "none";
     displayCards();
   };
 }
-
-
-
