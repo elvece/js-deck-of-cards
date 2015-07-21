@@ -51,7 +51,34 @@ function newDeck(){
 
   var suits = [ "d", "c", "s", "h"];
   var deck = [];
+
+  //creates 52 card deck with suits
+  for (var i = 0; i < ranks.length; i++) {
+    for (var j = 0; j < suits.length; j++) {
+      deck.push({
+        card: ranks[i].card,
+        suit: suits[j]
+      });
+    }
+  }
+  return deck;
 }
 
 // Shuffles the Deck
-function shuffleCards(cardDeck){}
+function shuffleCards(deck){
+  var output = [];
+  var workingArray = deck.slice(0);
+  var current = workingArray.length;
+
+  while (current) {
+    var random = Math.floor(Math.random() * current);
+    output.push(workingArray.splice(random, 1)[0]);
+    current --;
+    }
+    return output;
+}
+
+
+
+
+
