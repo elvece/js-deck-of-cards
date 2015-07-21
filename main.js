@@ -5,6 +5,9 @@ var showCards = document.getElementById("cards");
 showCards.onclick = function(){
   var cardContainer = document.getElementById('container');
   cardContainer.innerHTML = "";
+  cardContainer.style.display = "";
+  showCards.style.display = "none";
+  hideClick.style.display = "";
   displayCards();
 };
 
@@ -79,6 +82,19 @@ function shuffleCards(deck){
 }
 
 
+//button reset function
+var hideClick = document.getElementById("reset");
+var hideReset = function(){
+  hideClick.style.display = "none";
+};
+hideReset();
+
+hideClick.onclick = function(){
+  var cardContainer = document.getElementById('container');
+  cardContainer.style.display = "none";
+  showCards.style.display = "";
+  hideClick.style.display = "none";
+}
 
 
 
