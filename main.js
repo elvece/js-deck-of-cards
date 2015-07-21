@@ -25,7 +25,7 @@ function displayCards(){
     card.className = "card";
     //grabs the section with id container
     var cardContainer = document.getElementById('container');
-    //appends new dive to the section with the div container
+    //appends new div to the section with the div container
     cardContainer.appendChild(card);
     //sets the backgorund image of the new div to a specialized url
     card.style.backgroundImage = "url(images/" + shuffledCards[i].suit + "-" + shuffledCards[i].card + ".png" + ")";
@@ -92,6 +92,33 @@ hideReset();
 hideClick.onclick = function(){
   var cardContainer = document.getElementById('container');
   cardContainer.style.display = "none";
-  showCards.style.display = "";
   hideClick.style.display = "none";
-};
+
+  if (document.getElementById('new') === null) {
+    reDeal();
+  }
+}
+
+//creates reDeal button and appends to dom
+function reDeal(){
+  var reDealButton = document.createElement('button');
+  var text = document.createTextNode("Re-deal?");
+  var deal = document.getElementById('cards');
+
+  reDealButton.id = "new";
+  reDealButton.appendChild(text);
+  deal.parentNode.appendChild(reDealButton);
+//creates variable to get new reDeal button
+  var reShowCards =document.getElementById('new');
+//function that shows shuffled cards when redeal button is clicked
+  reShowCards.onclick = function(){
+    var cardContainer = document.getElementById('container');
+    cardContainer.innerHTML = "";
+    cardContainer.style.display = "";
+    hideClick.style.display = "";
+    displayCards();
+  };
+}
+
+
+
