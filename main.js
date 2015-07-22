@@ -82,11 +82,19 @@ function shuffleCards(deck){
 }
 
 
-//button reset function
+//create reset button
+var resetButton = document.createElement('button');
+var createReset = document.createTextNode("Reset");
+var section = document.getElementById('container');
+resetButton.appendChild(createReset);
+resetButton.id = "reset";
+section.parentNode.insertBefore(resetButton, section);
+
 var hideClick = document.getElementById("reset");
-var hideReset = function(){
+//reset button function
+function hideReset(){
   hideClick.style.display = "none";
-};
+}
 hideReset();
 
 hideClick.onclick = function(){
