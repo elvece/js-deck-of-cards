@@ -1,13 +1,15 @@
-# JavaScript Deck of Cards
+## JavaScript Deck of Cards
 
-## Setup
+***This repo contains my solution to the following exercise:***
+
+### Setup
 
 1. Create a new local project directory called "js-deck-of-cards".
 1. Add a local git repository.
 1. Create a remote repository on Github.
 1. Add/commit to your local git repo, and then push your changes to Github.
 
-## Steps
+### Steps
 
 Within the *main.js* file-
   1. Make sure you understand the current code. Add comments. Read the code aloud!
@@ -42,7 +44,7 @@ Within the *index.html* file-
   1. Make sure this button is only displayed after the end user clicks the "Deal!" button.
   1. After the "Reset!" button is clicked remove or hide it from the DOM.
 
-## Resources
+### Resources
 
 1. [Normalize CSS](http://nicolasgallagher.com/about-normalize-css/) - Make sure you understand *normalize.css*!
 1. [Creating your own Grid system](http://j4n.co/blog/Creating-your-own-css-grid-system)
